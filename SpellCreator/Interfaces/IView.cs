@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SpellCreator.Interfaces
 {
-    public interface ISpell
+    public interface IView
     {
-        List<string> GetModifiers();
-        int GetDamage();
-        int GetManaCost();
+        void ShowSpell(ISpell spell, int index);
+        void ShowMessage(string message);
+        string ReadInput();
     }
 }
+

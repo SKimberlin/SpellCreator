@@ -14,9 +14,9 @@ namespace SpellCreator.Model
             return 0;
         }
 
-        public string GetDescription()
+        public List<string> GetModifiers()
         {
-            return "Base Spell";
+            return new();
         }
 
         public int GetManaCost()

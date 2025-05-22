@@ -7,26 +7,17 @@ using System.Threading.Tasks;
 
 namespace SpellCreator.Model
 {
-    class SpellEffect : ISpell
+    public abstract class SpellEffect : ISpell
     {
         protected ISpell wrapped;
         public SpellEffect(ISpell spell)
         {
             wrapped = spell;
         }
-        public int GetDamage()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract int GetDamage();
 
-        public string GetDescription()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract List<string> GetModifiers();
 
-        public int GetManaCost()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract int GetManaCost();
     }
 }

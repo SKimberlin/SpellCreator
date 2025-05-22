@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace SpellCreator.Model
 {
-    class SpellBuilder
+    public class SpellBuilder
     {
         private ISpell currentSpell;
         private List<Type> addedEffects = new();
 
-        SpellBuilder()
+        public SpellBuilder()
         {
             currentSpell = new BaseSpell();
         }
@@ -40,7 +40,7 @@ namespace SpellCreator.Model
             return true;
         }
 
-        public ISpell Builld()
+        public ISpell Build()
         {
             var spell = currentSpell;
             currentSpell = new BaseSpell();
